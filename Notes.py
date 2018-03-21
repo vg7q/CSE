@@ -124,52 +124,13 @@
 # # Random Numbers
 #
 # print(random.randint(0, 1000))
-The_Count = (1, 2, 3, 4, 5)
-Cheeseburger_Ingredients = ["cheese", "beef", "sause", "onions", "lettis", "Bacon", "tomato", "bread"]
-print (Cheeseburger_Ingredients[0])
-print(len(Cheeseburger_Ingredients))
+#The_Count = (1, 2, 3, 4, 5)
+#Cheeseburger_Ingredients = ["cheese", "beef", "sause", "onions", "lettis", "Bacon", "tomato", "bread"]
+#print (Cheeseburger_Ingredients[0])
+#print(len(Cheeseburger_Ingredients))
 
 # Getting Through List
-for generic_item_name in Cheeseburger_Ingredients:
-    print (generic_item_name)
+#dictionary = ('name': 'Lance': 'age': )
 
-for item in The_Count:
-    print (item)
-
-for the_count in The_Count:
-    print(The_Count * 2)
-
-length = len (Cheeseburger_Ingredients)
-range(5) #A List Of The Numbers 0 Through 4
-
-for generic_item_name in range (len (Cheeseburger_Ingredients)):
-    item = Cheeseburger_Ingredients
-    print("The item at index %d is %s" % (generic_item_name, item))
-# Recasting into a list
-strOne = "Hello World!"
-ListOne = list (strOne)
-print (ListOne)
-ListOne[11] = '-'
-print (ListOne)
-print (ListOne[-1])
-#Adding things to a list
-Cheeseburger_Ingredients.append("Fries")
-print(Cheeseburger_Ingredients)
-
-#Remove things from a list
-Cheeseburger_Ingredients.pop(1)
-print(Cheeseburger_Ingredients)
-Cheeseburger_Ingredients.remove("Cheese")
-print(Cheeseburger_Ingredients)
-
-#Getting the alphabet
-import string
-print (string.arcii_letters)
-print (string.ascii_lowercase)
-print (string.ascii_uppercase)
-
-#Making things Lowercase
-strTwo = 'This is a very odd sentence'
-lowercase = strTwo.lower()
-print(lowercase)
-"".join(l1)
+#print(larger_dictionary{'NY'})
+#print(larger_dictionary['NY'][1])
