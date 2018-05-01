@@ -1,7 +1,7 @@
 world_map = {
     'SPAWN' : {
         'NAME': 'Spawn Room',
-        'DESCRIPTION': 'your car ran out of gas theres an abandon police station/prison',
+        'DESCRIPTION': 'your car ran out of gas there\'s an abandon police station/prison',
         'PATHS': {
             'NORTH':  'LIBRARYHOUSE',
         }
@@ -53,7 +53,8 @@ world_map = {
             'EAST': 'BOX_CHOICE_2',
             'NORTHEAST': 'BOX_CHOICE_3',
             'SOUTHEAST': 'BOX_CHOICE_1',
-            'NORTH': 'SILENT_ROOM'
+            'NORTH': 'SILENT_ROOM',
+            'SOUTH': 'SCARE'
         }
     },
     'SCARE': {
@@ -88,27 +89,44 @@ world_map = {
         'NAME': 'run or hide',
         'DESCRIPTION': "shhh",
         'PATHS': {
-            'NORTH': "NORTHHOUSE"
+            'NORTH': "QUIZ_OR_FIZZ",
+            'SOUTH': "CHOICES"
         }
     },
     'QUIZ_OR_FIZZ': {
         'NAME': 'solve the question or solve your death',
         'DESCRIPTION': "solve my question, or solve your death, what can fly up slow but falls down fast?",
         'PATHS': {
-            'NORTHEAST': "NORTHEASTHOUSE"
+            'SOUTH': "SILENT_ROOM",
+            'EAST': "QUIZ_OR_FIZZ_2"
         }
     },
-    'QUIZ_FOR_FIZZ': {
+    'QUIZ_OR_FIZZ_2': {
         'NAME': 'solve or fall!',
         'DESCRIPTION': "solve or fall, what can glide but cant hide?",
         'PATHS': {
-
+            'SOUTH': "MINIONS",
+            'WEST': "QUIZ_OR_FIZZ"
         }
     },
-
+    'MINIONS': {
+        'NAME': 'Exit',
+        'DESCRIPTION': "defeat the minions",
+        'PATHS': {
+            'SOUTH': "BOSS",
+            'NORTH': "QUIZ_OR_FIZZ_2"
+        }
+    },
+    'BOSS': {
+        'NAME': 'Boss_Room',
+        'DESCRIPTION': "you thought it was over?",
+        'PATHS': {
+            'NORTH': "MINIONS"
+        }
+    },
 }
 current_node = world_map['SPAWN']
-directions = ['NORTH', 'SOUTH', 'EAST', 'WEST']
+directions = ['NORTH', 'SOUTH', 'EAST', 'WEST', 'NORTHWEST', 'NORTHEAST', 'SOUTHEAST', 'SOUTHWEST']
 
 while True:
     print(current_node['NAME'])
